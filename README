@@ -1,0 +1,12 @@
+Start Apache Zookeper-
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Start Apache Kafka-
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+Next start the Spring Boot Application by running it as a Java Application.
+
+Also Start the consumer listening to the java_in_use_topic-
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --top
+
+Finally hit the url as follows- http://localhost:9876/kafka/producer?message=test
